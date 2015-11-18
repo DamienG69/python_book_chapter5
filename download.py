@@ -1,4 +1,9 @@
-import requests,zipfile,StringIO
+import requests,zipfile,StringIO,os
+
+#create directory of not exists
+if not os.path.exists('./data'):
+   os.makedirs('./data')
+
 source =requests.get("https://resources.lendingclub.com/LoanStats3d.csv.zip")
 stringio = StringIO.StringIO(source.content)
 unzipped = zipfile.ZipFile(stringio)

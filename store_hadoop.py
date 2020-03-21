@@ -4,7 +4,7 @@ from pywebhdfs.webhdfs import PyWebHdfsClient
 
 #2 make connection with hadoop file system
 
-hdfs = PyWebHdfsClient(user_name="hdfs",port=50070,host="sandbox.hortonworks.com")
+hdfs = PyWebHdfsClient(user_name="hdfs",port=50070,host="sandbox-hdp.hortonworks.com")
 
 
 hdfs.delete_file_dir('chapter5/LoanStats3d.csv',recursive=True)
